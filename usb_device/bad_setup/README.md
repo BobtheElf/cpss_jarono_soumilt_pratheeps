@@ -1,5 +1,4 @@
-# README
-## How to set up a Raspberry Pi Pico to have the bad_script.py
+# How to set up a Raspberry Pi Pico to have the bad_script.py
 1. Plug the Raspberry Pi Pico into the computer with the onboard BOOTSEL button pressed (you can let go of the BOOTSEL button once it is plugged into the computer).
 2. If the Pico appears as CIRCUITPY, skip to step #5. Else, the Pico will appear as a flashdrive. Add the flash_nuke.uf2 file to eliminate any programs or scripts already on the Pico.
 3. Add the adafruit-circuitpython-raspberry_pi_pico_en_US-7.2.3.uf2
