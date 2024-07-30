@@ -1,5 +1,0 @@
-C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/elf2uf2/CMakeFiles/elf2uf2.dir
-C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/elf2uf2/CMakeFiles/edit_cache.dir
-C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/elf2uf2/CMakeFiles/rebuild_cache.dir
-C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
-C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
