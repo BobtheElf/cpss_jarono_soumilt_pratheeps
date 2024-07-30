@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+C:/Users/jaron/Dropbox/Jaron/Sem11_2024_Summer/CSCI_587/Team Project/cpss_jarono_soumilt_pratheeps/usb_device/good_setup/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
