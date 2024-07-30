@@ -8,7 +8,9 @@ These files appear at the root of the repo and include this README.md (denotes s
 ### Subsystem-specific Files
 These files are used to create specific parts of a secure USB system, and are partitioned into folders that denote their function. Each subfolder may have a README.md file which describes how to set up this part of the USB system.
 ## Project Requirements
-To emulate a secure USB system, this project requires a USB device, a bad USB device, a computer which runs a USB driver, and another computer which runs a verification on the USB device.
+To emulate a secure USB system, this project requires encryption keys, a USB device, a bad USB device, a computer which runs a USB driver, and another computer which runs a verification on the USB device.
+### Encryption keys
+These are RSA keys that will be used in the following subsystems to facilitate encryption. Each subsystem may use some of these keys, but none of them will use all of the keys. In addition, some scripts may use a variable number of keys in order to reach all of the test cases necessary.
 ### USB Device
 This is the code for a device emulating a PLC (programmable logic controller) or HID (human interface device) which plugs into a usb port. This code is further partitioned into a **Good USB Device** and a **Bad USB Device**.
 #### Good USB Device
