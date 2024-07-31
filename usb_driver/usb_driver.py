@@ -1,6 +1,7 @@
 print ("Hello, World!")
 import serial
 
+#turn this into a while loop
 ser = serial.Serial('/dev/ttyACM0',9600)
 s = [0,1]
 while True:
