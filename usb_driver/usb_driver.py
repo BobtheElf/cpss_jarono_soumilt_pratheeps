@@ -2,6 +2,7 @@
 
 import serial
 import subprocess, sys
+import rsa
 
 def wait_for_usb():
     # Code will break when the new usb device is detected
@@ -33,9 +34,22 @@ def wait_for_usb():
                 new_device = True
                 break
     print("New Device Detected")
+# ============================================================
+def verify_device():
+    device_verified = False
+    #Wait for encrypted, signed message from the device HMI public key is already on the device
+    while True:
+        line = ser.readline()
+        if len(line) == 0:
+            print("Nothing from device")
+        else:
+            print(line)
+            break
+# ============================================================
 #Start the main block
 wait_for_usb()
 ser = serial.Serial('/dev/ttyACM0', 115200, timeout = 10)
+verify_device()
 #listen for input like on Google
 while True:
     line = ser.readline()
