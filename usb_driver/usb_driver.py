@@ -46,6 +46,14 @@ def verify_device():
             print(line)
             break
 # ============================================================
+key = RSA.import_key(open('usb_pub_key.pem').read())
+h = SHA256.new(message)
+try:
+    pkcs1_15.new(key).verify(h, signature)
+    print "The signature is valid."
+except (ValueError, TypeError):
+   print "The signature is not valid."
+# ============================================================
 #Start the main block
 wait_for_usb()
 ser = serial.Serial('/dev/ttyACM0', 115200, timeout = 10)
