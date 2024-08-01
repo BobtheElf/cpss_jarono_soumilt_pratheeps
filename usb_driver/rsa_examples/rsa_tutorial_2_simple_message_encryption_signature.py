@@ -1,9 +1,9 @@
 import rsa
 
 #Open the public key and private key files and save them into their respective key variables
-with open("hmi_key.pub", "rb") as f:
+with open("keys/hmi_pub_key.pem", "rb") as f:
     public_key = rsa.PublicKey.load_pkcs1(f.read())
-with open("hmi_key.prv", "rb") as f:
+with open("keys/hmi_prv_key.pem", "rb") as f:
     private_key = rsa.PrivateKey.load_pkcs1(f.read())
     
 #Message to encrypt and decrypt
