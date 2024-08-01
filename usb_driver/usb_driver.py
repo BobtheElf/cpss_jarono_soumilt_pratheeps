@@ -14,7 +14,7 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 
 scada_message = "hpbangandolufsen"
-device_message = "SJP587!team"
+device_message = b'SJP587!team'
 
 def wait_for_usb():
     # Code will break when the new usb device is detected
@@ -59,7 +59,7 @@ def verify_device():
             key = RSA.import_key(open('rsa_examples/keys/usb_pub_key.pem').read())
             h = SHA256.new(device_message)
             try:
-                pkcs1_15.new(key).verify(h, signature)
+                pkcs1_15.new(key).verify(h, line)
                 print("The signature is valid.")
             except (ValueError, TypeError):
                 print("The signature is not valid.")
