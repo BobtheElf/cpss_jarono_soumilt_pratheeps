@@ -27,4 +27,6 @@ if new_device:
     print("New Device Detected")
 else:
     print("No New Devices")
-        
+print(result)
+for device in devices:
+    print(device[23 : 32], end = "\n")
