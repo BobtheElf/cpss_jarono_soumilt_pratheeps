@@ -1,7 +1,6 @@
 #Usb_device.py : 
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
-from pynput import keyboard
 import time
 
 #Giving the HMI a signed message
