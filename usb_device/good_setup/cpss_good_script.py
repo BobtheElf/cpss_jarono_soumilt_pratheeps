@@ -21,7 +21,7 @@ def encrypt_data(data):
     return encrypted_data
 
 key = RSA.import_key(open('usb_prv_key.pem').read())
-h = SHA256.new(message)
+h = SHA256.new(device_message)
 signature = pkcs1_15.new(key).sign(h)
 
 # Load the public key (ensure you have the public key file 'public_key.pem')
