@@ -2,9 +2,21 @@
 
 import serial
 import subprocess, sys
+import adafruit_rsa
+from adafruit_rsa import PublicKey, PrivateKey
+import json
 
 scada_message = "hpbangandolufsen"
-device_message = b'SJP587!team'
+device_message = "SJP587!team"
+
+with open("adafruit_rsa_keys/device_small_prv.json", "r") as f:
+    device_priv_key_obj = json.loads(f.read())
+device_small_prv_key = PrivateKey(*device_priv_key_obj["private_key_arguments"])
+
+with open("adafruit_rsa_keys/hmi_small_prv.json", "r") as f:
+    hmi_priv_key_obj = json.loads(f.read())
+hmi_small_prv_key = PrivateKey(*hmi_priv_key_obj["private_key_arguments"])
+
 
 def wait_for_usb():
     # Code will break when the new usb device is detected
@@ -42,20 +54,16 @@ def verify_device():
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout = 10)
     #Wait for encrypted, signed message from the device HMI public key is already on the device
     while True:
-        line = ser.readline()
+        line = ser.readline().decode("utf-8")
         if len(line) == 0:
-            print("Nothing from device")
+            print("Nothing from device in verify_device")
         else:
-            print(line)
-            key = RSA.import_key(open('rsa_examples/keys/usb_pub_key.pem').read())
-            h = SHA256.new(device_message)
             try:
-                pkcs1_15.new(key).verify(h, line)
-                print("The signature is valid.")
-            except (ValueError, TypeError):
-                print("The signature is not valid.")
-
-            break
+                decrypted_message = adafruit_rsa.decrypt(line, device_small_prv_key)
+                print("Decrypted Message: ", decrypted_message.decode("utf-8"))
+            except:
+                print(line, " failed to decrypt")
+                print("Length from driver: ", len(line))
     print("Verification complete")
 # ============================================================
 
@@ -69,6 +77,7 @@ try:
 except:
     print("Device not connected")
 #listen for input like on Google
+verify_device()
 while True:
     line = ser.readline()
     if len(line) == 0:
