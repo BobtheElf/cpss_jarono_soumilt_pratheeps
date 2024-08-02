@@ -1,6 +1,16 @@
-#In common with bad_script
+#Copied from bad_script
+import time
 import board
 import digitalio
+import usb_hid
+from adafruit_hid.keycode import Keycode
+from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
+from adafruit_hid.consumer_control import ConsumerControl
+from adafruit_hid.consumer_control_code import ConsumerControlCode
+
+import random
+import sys
 
 #Usb_device.py : 
 from Crypto.PublicKey import RSA
@@ -11,8 +21,6 @@ import time
 from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
-
-import usb_serial
 
 # Verification message
 device_message = b'SJP587!team'
@@ -35,6 +43,15 @@ cipher_rsa = PKCS1_OAEP.new(public_key)
 encrypted_data = encrypt_data(signature)
 
 print(encrypted_data)
+
+# Set up Consumer Control - Control Codes can be found here: https://docs.circuitpython.org/projects/hid/en/latest/_modules/adafruit_hid/consumer_control_code.html#ConsumerControlCode
+cc = ConsumerControl(usb_hid.devices)
+
+# Set up a keyboard device. - Keycode can be found here: https://docs.circuitpython.org/projects/hid/en/latest/_modules/adafruit_hid/keycode.html#Keycode
+keyboard = Keyboard(usb_hid.devices)
+
+# Set up keyboard to write strings from macro
+write_text = KeyboardLayoutUS(keyboard)
 
 buttons = [board.GP0]
 key = [digitalio.DigitalInOut(pin_name) for pin_name in buttons]
