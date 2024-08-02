@@ -49,6 +49,7 @@ def wait_for_usb():
 # ============================================================
 def verify_device():
     device_verified = False
+    ser = serial.Serial('/dev/ttyACM0', 9600, timeout = 10)
     #Wait for encrypted, signed message from the device HMI public key is already on the device
     while True:
         line = ser.readline()
@@ -65,13 +66,18 @@ def verify_device():
                 print("The signature is not valid.")
 
             break
+    print("Verification complete")
 # ============================================================
 
 
 # ============================================================
 #Start the main block
 wait_for_usb()
-ser = serial.Serial('/dev/ttyACM0', 115200, timeout = 10)
+try:
+    ser = serial.Serial('/dev/ttyACM0', 9600, timeout = 10)
+    print("Connection successful")
+except:
+    print("Device not connected")
 verify_device()
 #listen for input like on Google
 while True:
